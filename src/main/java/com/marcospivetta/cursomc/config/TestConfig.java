@@ -11,7 +11,7 @@ import com.marcospivetta.cursomc.services.DBService;
 
 @Configuration
 @Profile("test")
-public class TestComfig {
+public class TestConfig {
 
 	@Autowired
 	private DBService dbService;
@@ -19,7 +19,7 @@ public class TestComfig {
 	@Bean
 	public boolean instantiateDatabase() throws ParseException {
 		
-		dbService.instantiateTestdatabase();	
+		dbService.instantiateTestDatabase();	
 		return true;
 	}
 }
