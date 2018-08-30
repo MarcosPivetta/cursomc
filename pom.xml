@@ -54,7 +54,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-		</dependency>	
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -63,8 +63,23 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version><!--$NO-MVN-MAN-VER$-->
+				<configuration>
+					<release>10</release>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.ow2.asm</groupId>
+						<artifactId>asm</artifactId>
+						<version>6.2</version> <!-- Use newer version of ASM -->
+					</dependency>
+				</dependencies>
+			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
